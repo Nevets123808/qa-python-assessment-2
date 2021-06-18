@@ -55,7 +55,12 @@ def one(string):
 
 
 def two(number):
-    return False
+    #Check all values up to number/2
+    for divisor in range(2,number//2):
+        if number%divisor == 0:
+            return False
+
+    return True
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
