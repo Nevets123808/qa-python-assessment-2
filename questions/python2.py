@@ -80,7 +80,7 @@ def two(number):
 
 
 def three(a):
-    return 1
+    return sum([int(str(a)*num) for num in range(1,5)]) # Has to be (1,5) as the end value is exclusive
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
