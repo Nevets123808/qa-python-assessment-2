@@ -209,7 +209,15 @@ def seven(a, b, c):
 
 
 def eight(string,  a):
-    return ""
+    #Find middle of the string
+    middle_index = len(string)//2
+
+    #the middle of the string will also be the middle of what we want to remove:
+    begin = middle_index - a//2
+
+    #the end of what we remove will be 'a' after the beginning
+    end = begin + a
+    return string[:begin]+string[end:]
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
