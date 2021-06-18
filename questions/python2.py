@@ -112,7 +112,10 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+    result = ''
+    for index in range(len(string1)):
+        result += string1[index] + string2[index]
+    return result
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
