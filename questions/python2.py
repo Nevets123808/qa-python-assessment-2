@@ -237,8 +237,31 @@ def eight(string,  a):
 
 
 def nine(string1, string2):
-
-    return 
+    """
+    dict1= {key: string1.count(key) for key in set(string1)}
+    dict2= {key: string2.count(key) for key in set(string2)}
+    for key in dict1.keys():
+        if key in dict2.keys() and dict1[key]>dict2[key]:
+            print(dict1[key], dict2[key])
+            return False
+    for key in dict2.keys():
+        if key in dict1.keys() and dict2[key]>dict1[key]:
+            return False        
+    """
+    arr1 = sorted(string1)
+    arr2 = sorted(string2)
+    temp = list(arr1)
+    #anagram check:
+    if arr1 == arr2: return True
+    for char in arr1:
+        print(char)
+        print(arr1)
+        if char in arr2:
+            temp.remove(char)
+            arr2.remove(char)
+    if len(temp)==0 or len(arr2)==0:
+        return True
+    return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
